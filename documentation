@@ -1,0 +1,158 @@
+Creating documentation for Nextrium is essential for establishing a standard approach to the language’s syntax, features, and best practices. Below is an outline and examples for a comprehensive Nextrium documentation:
+
+---
+
+# **Nextrium Documentation**
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Getting Started](#getting-started)
+3. [Basic Syntax](#basic-syntax)
+4. [Variables and Data Types](#variables-and-data-types)
+5. [Classes and Objects](#classes-and-objects)
+6. [Declarative Statements](#declarative-statements)
+7. [Control Flow](#control-flow)
+8. [Functions and Methods](#functions-and-methods)
+9. [Collections and Querying](#collections-and-querying)
+10. [Event Handling](#event-handling)
+11. [Error Handling](#error-handling)
+12. [Built-In Modules](#built-in-modules)
+
+---
+
+## 1. Introduction
+Nextrium is a **declarative, object-oriented, high-level scripting language** designed for simplicity and power. It supports dynamic typing, event-driven programming, and declarative syntax, making it ideal for building flexible and expressive applications with minimal boilerplate code.
+
+## 2. Getting Started
+Nextrium scripts are interpreted, allowing immediate feedback and rapid prototyping. Install the Nextrium interpreter from the official website, and start with a "Hello, World!" program:
+
+```nextrium
+print("Hello, World!")
+```
+
+## 3. Basic Syntax
+Nextrium’s syntax is concise and readable, focusing on declarations and expressions.
+
+```nextrium
+name = "Alice"
+age = 30
+print(name + " is " + age + " years old.")
+```
+
+## 4. Variables and Data Types
+Nextrium is dynamically typed. Supported types include:
+- **String**
+- **Number**
+- **Boolean**
+- **List**
+- **Object**
+
+### Variable Declaration
+Variables are declared and assigned without specifying a type:
+
+```nextrium
+greeting = "Hello, Nextrium!"
+score = 42
+```
+
+### Type Conversion
+Explicit conversion functions are available, such as `toString()` and `toNumber()`.
+
+```nextrium
+strScore = toString(score)
+```
+
+## 5. Classes and Objects
+Nextrium is object-oriented. Define a class using `class`, and properties are declared declaratively.
+
+```nextrium
+class Person {
+    property name: "Unknown"
+    property age: 0
+
+    method introduce() {
+        print("Hello, my name is " + name)
+    }
+}
+
+user = Person { name: "Alice", age: 30 }
+user.introduce()
+```
+
+## 6. Declarative Statements
+Nextrium’s declarative syntax allows setting properties based on conditions:
+
+```nextrium
+color = if isActive then "green" else "red"
+```
+
+## 7. Control Flow
+Nextrium supports standard control flow statements:
+
+- **Conditional Statements**
+   ```nextrium
+   if condition {
+       # code
+   } else {
+       # code
+   }
+   ```
+
+- **Loops**
+   ```nextrium
+   for item in list {
+       print(item)
+   }
+   ```
+
+## 8. Functions and Methods
+Functions are first-class citizens in Nextrium. Define them using the `function` keyword.
+
+```nextrium
+function add(a, b) {
+    return a + b
+}
+
+result = add(5, 3)
+```
+
+## 9. Collections and Querying
+Nextrium includes powerful collection types (Lists, Maps) with built-in querying syntax.
+
+```nextrium
+numbers = [1, 2, 3, 4, 5]
+filteredNumbers = filter numbers where item > 2
+print(filteredNumbers)  # Output: [3, 4, 5]
+```
+
+## 10. Event Handling
+Nextrium provides event handling for asynchronous programming.
+
+```nextrium
+on "dataLoaded" do {
+    print("Data is loaded.")
+}
+```
+
+## 11. Error Handling
+Handle exceptions with try-catch syntax.
+
+```nextrium
+try {
+    riskyOperation()
+} catch (e) {
+    print("Error: " + e.message)
+}
+```
+
+## 12. Built-In Modules
+Nextrium has built-in modules for I/O, networking, and math operations.
+
+```nextrium
+import io
+
+io.write("output.txt", "Hello, Nextrium!")
+```
+
+---
+

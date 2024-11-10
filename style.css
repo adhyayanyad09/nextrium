@@ -1,0 +1,55 @@
+/* Basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+#ide-container {
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#editor {
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+
+#run-button {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+#run-button:hover {
+    background-color: #45a049;
+}
+
+#output {
+    height: 150px;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: monospace;
+}
